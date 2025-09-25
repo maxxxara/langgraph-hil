@@ -1,0 +1,28 @@
+### Create a new session
+POST http://localhost:3000/session
+Content-Type: application/json
+
+###
+
+@sessionId = 68d3fcdc99e4e7e653c37e48
+
+### Get a specific session by ID
+GET http://localhost:3000/session/{{sessionId}}
+Content-Type: application/json
+
+###
+
+### Get all sessions
+GET http://localhost:3000/sessions  
+Content-Type: application/json
+
+###
+
+### Create a new message for a session  
+POST http://localhost:3000/{{sessionId}}/message
+Content-Type: application/json
+
+{
+  "content": "bbb",
+  "role": "user"
+}
